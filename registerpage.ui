@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>50</y>
+     <y>30</y>
      <width>191</width>
      <height>61</height>
     </rect>
@@ -43,36 +43,11 @@
     <set>Qt::NoTextInteraction</set>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="username">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>130</y>
-     <width>401</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 20px;
-border: 2px solid white;
-font-size:14pt;
-color: rgb(255, 255, 255);
-text-align: center;</string>
-   </property>
-   <property name="placeholderText">
-    <string>Username</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="password">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>190</y>
+     <y>170</y>
      <width>401</width>
      <height>41</height>
     </rect>
@@ -84,6 +59,9 @@ font-size:14pt;
 color: rgb(255, 255, 255);
 text-align: center;
 </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
    <property name="placeholderText">
     <string>Password</string>
@@ -93,7 +71,7 @@ text-align: center;
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>250</y>
+     <y>230</y>
      <width>401</width>
      <height>41</height>
     </rect>
@@ -106,6 +84,9 @@ color: rgb(255, 255, 255);
 text-align: center;
 </string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
    <property name="placeholderText">
     <string>Confirm Password</string>
    </property>
@@ -114,7 +95,7 @@ text-align: center;
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>350</y>
+     <y>390</y>
      <width>401</width>
      <height>41</height>
     </rect>
@@ -137,7 +118,7 @@ border-radius: 20px;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>430</y>
+     <y>460</y>
      <width>401</width>
      <height>41</height>
     </rect>
@@ -156,6 +137,54 @@ border-radius: 20px;</string>
     <string>Go back to login page</string>
    </property>
   </widget>
+  <widget class="QLineEdit" name="username">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 20px;
+border: 2px solid white;
+font-size:14pt;
+color: rgb(255, 255, 255);
+text-align: center;
+</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Username</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errorLabel">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>320</y>
+     <width>381</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:14pt;
+color: #f77062;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>repeatPassword</zorder>
+  <zorder>createAccountButton</zorder>
+  <zorder>returnButton</zorder>
+  <zorder>password</zorder>
+  <zorder>username</zorder>
+  <zorder>errorLabel</zorder>
  </widget>
  <resources/>
  <connections/>

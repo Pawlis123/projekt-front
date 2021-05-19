@@ -2,13 +2,15 @@ from PyQt5.QtWidgets import QDialog
 from PyQt5 import QtWidgets
 from PyQt5.uic import loadUi
 import requests
-from Views import widget, get_jwt
+from Views import widget
 
 
 class CreateAccount(QDialog):
     def __init__(self):
         super(CreateAccount, self).__init__()
         loadUi("registerpage.ui", self)
+        self.createAccountButton.setStyleSheet(open("buttons.qss", "r").read())
+        self.returnButton.setStyleSheet(open("buttons.qss", "r").read())
         self.createAccountButton.clicked.connect(self.register_function)
         self.returnButton.clicked.connect(self.return_function)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -19,10 +21,21 @@ class CreateAccount(QDialog):
         password = self.password.text()
         confirm_password = self.repeatPassword.text()
         if password != confirm_password:
-            print("wrooong")
-            print(get_jwt())
+            self.errorLabel.setText("Passwords are not equal.")
+            self.password.setText("")
+            self.repeatPassword.setText("")
         else:
-            print("correct")
+            try:
+                user_obj = {'username': username, 'password': password}
+                msg = requests.post('http://127.0.0.1:5000/api/register', json=user_obj).json()
+                self.errorLabel.setText(msg['msg'])
+                self.username.setText("")
+                self.password.setText("")
+                self.repeatPassword.setText("")
+            except Exception as e:
+                self.errorLabel.setText('No internet connection')
+                print(e)
 
     def return_function(self):
         widget.setCurrentIndex(widget.currentIndex() - 1)
+        widget.removeWidget(self)

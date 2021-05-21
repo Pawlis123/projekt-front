@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color:rgb(38, 38, 38);</string>
   </property>
@@ -90,30 +93,6 @@ border-radius: 20px;</string>
      <set>Qt::NoTextInteraction</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="password">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>401</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 20px;
-border: 2px solid white;
-font-size:14pt;
-color: rgb(255, 255, 255);
-text-align: center;
-</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="placeholderText">
-     <string>Password</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="errorLabel">
     <property name="geometry">
      <rect>
@@ -143,12 +122,17 @@ color: #f77062;</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
      <string notr="true">border-radius: 20px;
-border: 2px solid white;
+border: 2px solid rgb(66, 64, 64);
 font-size:14pt;
-color: rgb(255, 255, 255);
+color: 	rgb(136,136,136);
 text-align: center;
+font-color: gray;
+
 </string>
     </property>
     <property name="alignment">
@@ -156,6 +140,35 @@ text-align: center;
     </property>
     <property name="placeholderText">
      <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>401</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 20px;
+border: 2px solid rgb(66, 64, 64);
+font-size:14pt;
+color:rgb(136,136,136);
+text-align: center;
+font-color: gray;
+
+</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Password</string>
     </property>
    </widget>
   </widget>

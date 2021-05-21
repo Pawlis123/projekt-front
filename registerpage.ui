@@ -54,9 +54,9 @@
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius: 20px;
-border: 2px solid white;
+border: 2px solid rgb(66, 64, 64);
 font-size:14pt;
-color: rgb(255, 255, 255);
+color: 	rgb(136,136,136);
 text-align: center;
 </string>
    </property>
@@ -78,9 +78,9 @@ text-align: center;
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius: 20px;
-border: 2px solid white;
+border: 2px solid rgb(66, 64, 64);
 font-size:14pt;
-color: rgb(255, 255, 255);
+color: 	rgb(136,136,136);
 text-align: center;
 </string>
    </property>
@@ -148,9 +148,9 @@ border-radius: 20px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius: 20px;
-border: 2px solid white;
+border: 2px solid rgb(66, 64, 64);
 font-size:14pt;
-color: rgb(255, 255, 255);
+color: 	rgb(136,136,136);
 text-align: center;
 </string>
    </property>

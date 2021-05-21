@@ -1,0 +1,109 @@
+QComboBox {
+    border-radius: 3px;
+    border: 2px solid rgb(66, 64, 64);
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+    background-color: rgb(38, 38, 38);
+    font-size: 20px;
+    color: rgb(136,136,136);
+}
+
+
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+    background-color: #f77062;
+}
+/*QComboBox::drop-down:hover {*/
+/*   background-color: #f55c4c;*/
+/*}*/
+
+
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox QAbstractItemView {
+    selection-color: #f55c4c;
+    selection-background-color: #2e2d2d;
+    selection-background-border: none;
+    background-color: rgb(38, 38, 38);
+    outline: 0px;
+    border: 0px;
+    color: 	rgb(136,136,136);
+    border: 2px solid rgb(66, 64, 64);
+}
+
+QScrollBar:vertical {
+	border: 0px;
+    background: rgb(38, 38, 38);
+    width: 14px;
+    margin: 15px 0 15px 0;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {
+	background-color: #f77062;
+	min-height: 30px;
+	border-radius: 7px;
+}
+QScrollBar::handle:vertical:hover{
+	background-color: #f55c4c;
+}
+QScrollBar::handle:vertical:pressed {
+	background-color: #f55c4c;
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: rgb(38, 38, 38);
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color: #f55c4c;
+}
+QScrollBar::sub-line:vertical:pressed {
+	background-color: #f55c4c;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: rgb(38, 38, 38);
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical:hover {
+	background-color: #f55c4c;
+}
+QScrollBar::add-line:vertical:pressed {
+	background-color: #f55c4c;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}

@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QSizePolicy
 from PyQt5.uic import loadUi
 import requests
 from Views import widget
@@ -17,6 +17,7 @@ class Login(QMainWindow):
         self.loginButton.clicked.connect(self.login_function)
         self.registerButton.clicked.connect(self.go_to_create)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.loginButton.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
     def login_function(self):
         login = self.login.text()
@@ -42,8 +43,13 @@ class Login(QMainWindow):
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
     def go_to_news_window(self):
+        self.errorLabel.setText("Loading...")
+        self.errorLabel.repaint()
         test = NewsWindow()
+        self.errorLabel.setText("")
+        self.errorLabel.repaint()
         widget.addWidget(test)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         widget.setFixedHeight(622)
         widget.setFixedWidth(1021)
+

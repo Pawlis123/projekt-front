@@ -1,7 +1,10 @@
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMainWindow, QSizePolicy
+from PyQt5.QtCore import QPoint
+from PyQt5.QtWidgets import QMainWindow, QSizePolicy, QDesktopWidget
 from PyQt5.uic import loadUi
 import requests
+from PyQt5.uic.properties import QtCore
+
 from Views import widget
 from Views.CreateAccountView import CreateAccount
 from Views import set_jwt
@@ -18,6 +21,8 @@ class Login(QMainWindow):
         self.registerButton.clicked.connect(self.go_to_create)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.loginButton.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self.oldPos = self.pos()
+
 
     def login_function(self):
         login = self.login.text()
@@ -52,4 +57,5 @@ class Login(QMainWindow):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         widget.setFixedHeight(622)
         widget.setFixedWidth(1021)
+
 

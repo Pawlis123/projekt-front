@@ -1,7 +1,8 @@
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.uic import loadUi
-from Views import get_dict , add_entries
-from Utils.UrlEdit import url_edit
+from Views import get_dict, widget
+from Utils.ArticleManager import url_edit, url_delete
 
 
 class ManageUrls(QMainWindow):
@@ -16,8 +17,11 @@ class ManageUrls(QMainWindow):
         self.saveChangesButton.setStyleSheet(open("buttons.qss", "r").read())
         self.saveChangesButton.clicked.connect(self.save_changes)
         self.addUrlButton.clicked.connect(self.add_url)
+        self.removeButton.clicked.connect(self.delete_item)
+        self.returnButton.clicked.connect(self.go_back)
         self.init_combo_box()
         self.namesBox.setStyleSheet(open("comboBoxStyling.qss", "r").read())
+
 
     def init_combo_box(self):
         for key in get_dict().keys():
@@ -34,13 +38,29 @@ class ManageUrls(QMainWindow):
         self.urlBox.setText("")
 
     def save_changes(self):
+
         message = url_edit(self.new_urls_dict)
         self.errorLabel.setText(message)
-        for key in self.new_urls_dict.keys():
-            if not get_dict()[key]:
-                self.namesBox.addItem(key)
+        for entry in self.new_urls_dict.items():
+            if not get_dict().get(entry[0]):
+                self.namesBox.addItem(entry[0])
         self.new_urls_dict.clear()
-        self.namesBox.repaint()
+
+    def delete_item(self):
+        key = self.namesBox.currentText()
+        index = self.namesBox.currentIndex()
+        message = url_delete(key)
+        self.errorLabel.setText(message)
+        get_dict().pop(key)
+        self.namesBox.removeItem(index)
+
+    def go_back(self):
+        widget.setCurrentIndex(widget.currentIndex() - 1)
+        widget.removeWidget(self)
+        widget.setFixedHeight(622)
+        widget.setFixedWidth(1021)
+
+
 
 
 

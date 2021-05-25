@@ -20,7 +20,7 @@ class NewsWindow(QMainWindow):
         self.pushButton.clicked.connect(self.logging_out)
         self.pushButton_2.clicked.connect(self.go_to_manage)
         self.refreshButton.clicked.connect(self.refresh)
-        self.widgetRef = None
+
 
     def initUI(self):
         items = []
@@ -39,16 +39,16 @@ class NewsWindow(QMainWindow):
     def logging_out(self):
         widget.setCurrentIndex(widget.currentIndex() - 1)
         widget.removeWidget(self)
-        widget.setFixedWidth(445)
-        widget.setFixedHeight(554)
+        widget.setFixedWidth(531)  # 445
+        widget.setFixedHeight(683)
         set_jwt("")
 
     def go_to_manage(self):
         manage_view = ManageUrls()
         widget.addWidget(manage_view)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        widget.setFixedWidth(445)
-        widget.setFixedHeight(759)
+        widget.setFixedWidth(527)
+        widget.setFixedHeight(805)
 
     def refresh(self):
         try:

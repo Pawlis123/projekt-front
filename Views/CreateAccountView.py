@@ -20,7 +20,11 @@ class CreateAccount(QDialog):
         username = self.username.text()
         password = self.password.text()
         confirm_password = self.repeatPassword.text()
-        if password != confirm_password:
+        if len(password) < 6:
+            self.errorLabel.setText("Password should be at least 6 characters long")
+            self.password.setText("")
+            self.repeatPassword.setText("")
+        elif password != confirm_password:
             self.errorLabel.setText("Passwords are not equal.")
             self.password.setText("")
             self.repeatPassword.setText("")
@@ -34,7 +38,7 @@ class CreateAccount(QDialog):
                 self.repeatPassword.setText("")
             except Exception as e:
                 self.errorLabel.setText('No internet connection')
-                print(e)
+
 
     def return_function(self):
         widget.setCurrentIndex(widget.currentIndex() - 1)

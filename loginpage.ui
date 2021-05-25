@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>445</width>
-    <height>551</height>
+    <width>531</width>
+    <height>683</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +24,8 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>390</y>
-      <width>401</width>
+      <y>450</y>
+      <width>491</width>
       <height>41</height>
      </rect>
     </property>
@@ -47,8 +47,8 @@ border-radius: 20px;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>460</y>
-      <width>401</width>
+      <y>520</y>
+      <width>491</width>
       <height>41</height>
      </rect>
     </property>
@@ -69,15 +69,15 @@ border-radius: 20px;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>100</x>
       <y>30</y>
-      <width>191</width>
+      <width>311</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>30</pointsize>
+      <pointsize>40</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -97,10 +97,15 @@ border-radius: 20px;</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>240</y>
-      <width>381</width>
+      <y>330</y>
+      <width>471</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">font-size:14pt;
@@ -117,8 +122,8 @@ color: #f77062;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
-      <width>401</width>
+      <y>160</y>
+      <width>491</width>
       <height>41</height>
      </rect>
     </property>
@@ -128,7 +133,7 @@ color: #f77062;</string>
     <property name="styleSheet">
      <string notr="true">border-radius: 20px;
 border: 2px solid rgb(66, 64, 64);
-font-size:14pt;
+font-size:15pt;
 color: 	rgb(136,136,136);
 text-align: center;
 font-color: gray;
@@ -146,8 +151,8 @@ font-color: gray;
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>170</y>
-      <width>401</width>
+      <y>230</y>
+      <width>491</width>
       <height>41</height>
      </rect>
     </property>
@@ -157,7 +162,7 @@ font-color: gray;
     <property name="styleSheet">
      <string notr="true">border-radius: 20px;
 border: 2px solid rgb(66, 64, 64);
-font-size:14pt;
+font-size:15pt;
 color:rgb(136,136,136);
 text-align: center;
 font-color: gray;
@@ -177,7 +182,7 @@ font-color: gray;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>445</width>
+     <width>531</width>
      <height>21</height>
     </rect>
    </property>

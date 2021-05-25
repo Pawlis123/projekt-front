@@ -1,13 +1,11 @@
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import QPoint
 from PyQt5.QtWidgets import QMainWindow, QSizePolicy, QDesktopWidget
 from PyQt5.uic import loadUi
 import requests
-from PyQt5.uic.properties import QtCore
 
 from Views import widget
 from Views.CreateAccountView import CreateAccount
-from Views import set_jwt
+from Views import set_jwt, base_url
 from Views.NewsWindow import NewsWindow
 
 
@@ -31,7 +29,7 @@ class Login(QMainWindow):
         self.password.setText("")
         testobj = {'username': login, 'password': password}
         try:
-            authorization_content = requests.post('http://127.0.0.1:5000/api/login', json=testobj)
+            authorization_content = requests.post(base_url+'/api/login', json=testobj)
         except:
             self.errorLabel.setText("No internet connection.")
             return
@@ -55,7 +53,7 @@ class Login(QMainWindow):
         self.errorLabel.repaint()
         widget.addWidget(test)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-        widget.setFixedHeight(622)
-        widget.setFixedWidth(1021)
+        widget.setFixedHeight(616)
+        widget.setFixedWidth(1254)
 
 

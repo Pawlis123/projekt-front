@@ -57,8 +57,8 @@ class ManageUrls(QMainWindow):
     def go_back(self):
         widget.setCurrentIndex(widget.currentIndex() - 1)
         widget.removeWidget(self)
-        widget.setFixedHeight(622)
-        widget.setFixedWidth(1021)
+        widget.setFixedHeight(616)
+        widget.setFixedWidth(1254)
 
 
 

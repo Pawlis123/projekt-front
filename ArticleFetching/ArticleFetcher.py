@@ -1,11 +1,11 @@
-from Views import get_jwt
+from Views import get_jwt, base_url
 import requests
 
 
 def article_fetch():
     header = {'Authorization': 'Bearer ' + get_jwt().strip()}
     try:
-        articles = requests.get('http://127.0.0.1:5000/api/articles', headers=header)
+        articles = requests.get(base_url+'/api/articles', headers=header)
     except:
         return "Internal server error."
     articles_dict = articles.json()

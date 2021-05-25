@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1021</width>
-    <height>622</height>
+    <width>1252</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@ QPushButton::hover{
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>520</y>
+      <y>530</y>
       <width>291</width>
       <height>41</height>
      </rect>
@@ -41,8 +41,8 @@ border-radius: 20px;</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>520</y>
+      <x>940</x>
+      <y>530</y>
       <width>291</width>
       <height>41</height>
      </rect>
@@ -61,7 +61,7 @@ border-radius: 20px;</string>
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>981</width>
+      <width>1211</width>
       <height>411</height>
      </rect>
     </property>
@@ -70,8 +70,8 @@ border-radius: 20px;</string>
    <widget class="QLabel" name="messageBox">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>450</y>
+      <x>220</x>
+      <y>460</y>
       <width>801</width>
       <height>41</height>
      </rect>
@@ -90,9 +90,9 @@ color: #f77062;</string>
    <widget class="QPushButton" name="refreshButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>520</y>
-      <width>281</width>
+      <x>480</x>
+      <y>530</y>
+      <width>291</width>
       <height>41</height>
      </rect>
     </property>
@@ -111,7 +111,7 @@ border-radius: 20px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1021</width>
+     <width>1252</width>
      <height>21</height>
     </rect>
    </property>
